@@ -99,12 +99,19 @@ const Projects = () => {
                   </div>
 
                   <div className="flex items-center gap-12">
-                    <a href={project.github} className="text-xs font-black text-slate-900 hover:text-indigo-600 transition-colors uppercase tracking-widest flex items-center gap-2">
-                      <Github size={18} /> Source
-                    </a>
-                    <a href={project.link} className="text-xs font-black text-slate-900 hover:text-indigo-600 transition-colors uppercase tracking-widest flex items-center gap-2">
-                      <ExternalLink size={18} /> Live Demo
-                    </a>
+                    {project.github !== '#' && (
+                      <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-xs font-black text-slate-900 hover:text-indigo-600 transition-colors uppercase tracking-widest flex items-center gap-2">
+                        <Github size={18} /> Source
+                      </a>
+                    )}
+                    {project.link !== '#' && (
+                      <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-xs font-black text-slate-900 hover:text-indigo-600 transition-colors uppercase tracking-widest flex items-center gap-2">
+                        <ExternalLink size={18} /> Live Demo
+                      </a>
+                    )}
+                    {project.github === '#' && project.link === '#' && (
+                      <span className="text-xs font-black text-slate-300 uppercase tracking-widest">Coming Soon</span>
+                    )}
                   </div>
                 </div>
               </div>
@@ -115,7 +122,9 @@ const Projects = () => {
         <div className="mt-40 text-center">
           <p className="text-[10px] font-black text-slate-400 uppercase tracking-[0.3em] mb-10">More to explore</p>
           <a
-            href="https://github.com"
+            href="https://github.com/ChikomaSakala"
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-12 py-6 rounded-full bg-slate-900 text-white font-black text-xs uppercase tracking-[0.2em] hover:bg-indigo-600 transition-all shadow-2xl shadow-slate-200 hover-lift inline-block"
           >
             Explore More Projects

@@ -2,7 +2,7 @@
 
 import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
-import { Send, Phone, Mail, MapPin, Github, Linkedin, Twitter, MessageSquare, ArrowRight } from 'lucide-react';
+import { Send, Phone, Mail, MapPin, Github, Linkedin, ArrowRight } from 'lucide-react';
 import emailjs from '@emailjs/browser';
 import { cn } from '@/lib/utils';
 
@@ -91,11 +91,10 @@ const Contact = () => {
 
           <motion.div variants={{ hidden: { opacity: 0, y: 10 }, visible: { opacity: 1, y: 0 } }} className="flex gap-4">
              {[
-               { icon: Github, href: '#' },
-               { icon: Linkedin, href: 'https://zm.linkedin.com/in/chikoma-sakala-8ab64429b' },
-               { icon: Twitter, href: '#' },
+               { icon: Github, href: 'https://github.com/ChikomaSakala', label: 'GitHub' },
+               { icon: Linkedin, href: 'https://zm.linkedin.com/in/chikoma-sakala-8ab64429b', label: 'LinkedIn' },
              ].map((social, i) => (
-                <a key={i} href={social.href} className="w-14 h-14 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-400 hover:text-indigo-600 hover:bg-white hover:border-indigo-100 transition-all shadow-sm">
+                <a key={i} href={social.href} target="_blank" rel="noopener noreferrer" aria-label={social.label} className="w-14 h-14 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-400 hover:text-indigo-600 hover:bg-white hover:border-indigo-100 transition-all shadow-sm">
                    <social.icon size={20} />
                 </a>
              ))}

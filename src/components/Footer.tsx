@@ -33,7 +33,7 @@ const Footer = () => {
                 <span className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-400">Network</span>
                 <ul className="space-y-4">
                   <li><a href={linkedinUrl} target="_blank" rel="noopener noreferrer" className="text-xs font-black text-slate-900 hover:text-indigo-600 transition-colors uppercase tracking-widest">LinkedIn</a></li>
-                  <li><a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-xs font-black text-slate-900 hover:text-indigo-600 transition-colors uppercase tracking-widest">GitHub</a></li>
+                  <li><a href="https://github.com/ChikomaSakala" target="_blank" rel="noopener noreferrer" className="text-xs font-black text-slate-900 hover:text-indigo-600 transition-colors uppercase tracking-widest">GitHub</a></li>
                   <li><a href="mailto:sakalajrchikoma@gmail.com" className="text-xs font-black text-slate-900 hover:text-indigo-600 transition-colors uppercase tracking-widest">Email</a></li>
                 </ul>
               </div>
